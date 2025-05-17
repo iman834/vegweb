@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fresh Veggie Shop</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+      * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f6fff8;
+    color: #222;
+    line-height: 1.6;
+}
+
+header {
+    background: #388e3c;
+    color: #fff;
+    padding: 1.5rem 0;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 0.5rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.hero {
+    background: url('https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+    color: #fff;
+    text-align: center;
+    padding: 5rem 1rem 4rem 1rem;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 4px #222;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 4px #222;
+}
+
+.cta-btn {
+    background: #81c784;
+    color: #222;
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 2rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+
+.cta-btn:hover {
+    background: #388e3c;
+    color: #fff;
+}
+
+.products {
+    padding: 3rem 1rem;
+    background: #e8f5e9;
+    text-align: center;
+}
+
+.products h2 {
+    margin-bottom: 2rem;
+}
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.product {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(56, 142, 60, 0.08);
+    padding: 1rem;
+    width: 220px;
+    transition: transform 0.2s;
+}
+
+.product:hover {
+    transform: translateY(-8px) scale(1.03);
+}
+
+.product img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 0.75rem;
+}
+
+.product h3 {
+    margin-bottom: 0.5rem;
+}
+
+.product p {
+    margin-bottom: 0.75rem;
+    color: #388e3c;
+    font-weight: bold;
+}
+
+.product button {
+    background: #388e3c;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 0.5rem 1.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.2s;
+}
+
+.product button:hover {
+    background: #81c784;
+    color: #222;
+}
+
+.about, .contact {
+    padding: 3rem 1rem;
+    text-align: center;
+}
+
+.about h2, .contact h2 {
+    margin-bottom: 1rem;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.contact input, .contact textarea {
+    width: 100%;
+    padding: 0.7rem;
+    border: 1px solid #b2dfdb;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+.contact textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+.contact button {
+    background: #388e3c;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 0.5rem 1.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.2s;
+}
+
+.contact button:hover {
+    background: #81c784;
+    color: #222;
+}
+
+footer {
+    background: #222;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 1rem;
+    margin-top: 2rem;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+    .product-list {
+        flex-direction: column;
+        align-items: center;
+    }
+    .hero {
+        padding: 3rem 1rem 2rem 1rem;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Fresh Veggie Shop</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="hero">
+        <h2>Eat Fresh, Stay Healthy!</h2>
+        <p>Buy the freshest vegetables directly from local farms.</p>
+        <a class="cta-btn" href="#products">Shop Now</a>
+    </section>
+    <section id="products" class="products">
+        <h2>Our Vegetables</h2>
+        <div class="product-list">
+            <div class="product">
+                <img src="img/tomato.png" alt="Tomatoes">
+                <h3>Tomatoes</h3>
+                <p>₹40/kg</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="img/carrot.png" alt="Carrots">
+                <h3>Carrots</h3>
+                <p>₹35/kg</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="img/potato.png" alt="potato">
+                <h3>Potato</h3>
+                <p>₹60/kg</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="img/cap.png" alt="capcicum">
+                <h3>Capcicum</h3>
+                <p>₹30/bunch</p>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+    </section>
+    <section id="about" class="about">
+        <h2>About Us</h2>
+        <p>We are committed to delivering farm-fresh vegetables to your doorstep. All our veggies are sourced from local farmers and are 100% organic and pesticide-free.</p>
+    </section>
+    <section id="contact" class="contact">
+        <h2>Contact</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Email Address" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+    <footer>
+        <p>&copy; 2025 iman. All rights reserved.</p>
+    </footer>
+</body>
+</html>
